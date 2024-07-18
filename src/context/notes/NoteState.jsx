@@ -57,7 +57,7 @@ const NoteState = (props) => {
   const addNote = (title, description, tag) => {
     // TODO: API Call
     const note = {
-      id: "bvxcbthgsdcdshraspl",
+      id: Math.random(),
       user: "234908ujonafdjkfe",
       title: title,
       description: description,
