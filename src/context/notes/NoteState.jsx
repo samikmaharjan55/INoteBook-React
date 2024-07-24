@@ -79,7 +79,8 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({ title, description, tag }),
     });
-    const json = await response.json();
+    const note = await response.json();
+    setNotes(notes.concat(note));
     // const note = {
     //   id: Math.random(),
     //   user: "234908ujonafdjkfe",
@@ -89,7 +90,6 @@ const NoteState = (props) => {
     //   date: "2024-07-18",
     //   __v: "0",
     // };
-    // setNotes(notes.concat(note));
   };
 
   // Delete a Note
