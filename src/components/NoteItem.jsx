@@ -15,6 +15,7 @@ const NoteItem = (props) => {
               className="far fa-trash-alt mx-2"
               onClick={() => {
                 deleteNote(note.id);
+                props.showAlert("Deleted Successfully", "success");
               }}></i>
             <i
               className="far fa-edit mx-2"
