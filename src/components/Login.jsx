@@ -32,41 +32,44 @@ const Login = (props) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="mb-3">
-        <label htmlFor="email" className="form-label">
-          Email address
-        </label>
-        <input
-          value={credentials.email}
-          onChange={onChange}
-          type="email"
-          className="form-control"
-          id="email"
-          name="email"
-          aria-describedby="emailHelp"
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
-        <input
-          value={credentials.password}
-          onChange={onChange}
-          type="password"
-          className="form-control"
-          id="password"
-          name="password"
-          required
-        />
-      </div>
+    <div className="mt-3">
+      <h2>Login to Continue to iNoteBook</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">
+            Email address
+          </label>
+          <input
+            value={credentials.email}
+            onChange={onChange}
+            type="email"
+            className="form-control"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
+          <input
+            value={credentials.password}
+            onChange={onChange}
+            type="password"
+            className="form-control"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
 
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
-    </form>
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 
